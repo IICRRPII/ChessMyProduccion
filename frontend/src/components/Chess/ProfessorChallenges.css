@@ -1,0 +1,278 @@
+/* ProfessorBoard.css - Estilos específicos para el componente ProfessorChallenges */
+.professor-challenges-container {
+  background-color: #e9e9e9;
+  color: #1a1a1a;
+  min-height: 100vh;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.professor-challenges-title {
+  font-size: 2.2rem;
+  margin-bottom: 20px;
+  text-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  text-align: center;
+}
+
+.professor-challenges-room-code {
+  width: 100%;
+  padding: 12px 15px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 1rem;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  margin-bottom: 15px;
+}
+
+.professor-challenges-start-btn {
+  padding: 12px 25px;
+  background-color: #272727;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  width: 100%;
+}
+
+.professor-challenges-start-btn:hover {
+  background-color: #474747;
+}
+
+/* Layout principal */
+.professor-challenges-layout {
+  display: flex;
+  width: 100%;
+  max-width: 1400px;
+  gap: 30px;
+}
+
+/* Columnas */
+.professor-challenges-left-column {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  min-width: 250px;
+}
+
+.professor-challenges-center-column {
+  flex: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 300px;
+  max-width: 600px;
+  margin-top: 75px;
+}
+
+.professor-challenges-right-column {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  min-width: 250px;
+}
+
+/* Tablero */
+.professor-challenges-board-container {
+  width: 100%;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.professor-challenges-board-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+/* Piezas */
+.professor-challenges-pieces-container {
+  background: #2a2a2a;
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+  padding: 20px;
+  color: white;
+}
+
+.professor-challenges-pieces-title {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 1.3rem;
+}
+
+.professor-challenges-pieces-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.professor-challenges-piece-btn {
+  background: rgba(255, 255, 255, 0.1);
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  border-radius: 8px;
+  padding: 10px;
+  cursor: pointer;
+  transition: all 0.3s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  aspect-ratio: 1/1;
+}
+
+.professor-challenges-piece-btn:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.professor-challenges-piece-btn.professor-challenges-active {
+  background: rgba(247, 249, 252, 0.3);
+  border-color: #fff;
+  box-shadow: 0 0 10px rgba(209, 227, 253, 0.5);
+}
+
+.professor-challenges-piece-img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.professor-challenges-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.professor-challenges-delete-btn {
+  padding: 12px;
+  background: rgba(220, 53, 69, 0.2);
+  border: 2px solid #dc3545;
+  color: white;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.3s;
+  font-size: 1rem;
+}
+
+.professor-challenges-delete-btn:hover {
+  background: rgba(220, 53, 69, 0.3);
+}
+
+.professor-challenges-delete-btn.professor-challenges-active {
+  background: rgba(220, 53, 69, 0.4);
+  box-shadow: 0 0 10px rgba(220, 53, 69, 0.5);
+}
+
+.professor-challenges-cancel-btn {
+  padding: 12px;
+  background: rgba(108, 117, 125, 0.2);
+  border: 2px solid #6c757d;
+  color: white;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.3s;
+  font-size: 1rem;
+}
+
+.professor-challenges-cancel-btn:hover {
+  background: rgba(108, 117, 125, 0.3);
+}
+
+/* Movimientos */
+.professor-challenges-moves-list {
+  max-height: 400px;
+  overflow-y: auto;
+  margin-bottom: 15px;
+}
+
+.professor-challenges-move-item {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 10px;
+  align-items: center;
+  padding: 10px;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 6px;
+}
+
+/* Responsive */
+@media (max-width: 1200px) {
+  .professor-challenges-layout {
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .professor-challenges-left-column,
+  .professor-challenges-center-column,
+  .professor-challenges-right-column {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .professor-challenges-center-column {
+    margin-top: 0;
+    order: -1; /* Mover el tablero arriba en móviles */
+    align-items: center;
+  }
+
+  .professor-challenges-board-container {
+    width: 100%;
+    max-width: 600px;
+  }
+}
+
+@media (max-width: 768px) {
+  .professor-challenges-title {
+    font-size: 1.8rem;
+  }
+  
+  .professor-challenges-pieces-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .professor-challenges-board-container {
+    width: calc(100% +40px);
+    margin: 0 -20px;
+    border-radius: 0;
+  }
+
+  .professor-challenges-moves-list {
+    max-height: 200px;
+  }
+
+  .professor-challenges-actions button {
+    padding: 10px;
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .professor-challenges-title {
+    font-size: 1.5rem;
+  }
+  
+  .professor-challenges-pieces-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  
+  .professor-challenges-piece-btn {
+    padding: 5px;
+  }
+  
+  .professor-challenges-room-code {
+    padding: 10px;
+  }
+  
+  .professor-challenges-start-btn,
+  .professor-challenges-delete-btn,
+  .professor-challenges-cancel-btn {
+    padding: 10px 5px;
+    font-size: 0.8rem;
+  }
+}
