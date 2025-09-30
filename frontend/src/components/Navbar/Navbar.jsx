@@ -161,7 +161,6 @@ const Navbar = () => {
             {esAlumno && <li><NavLink to="/tus_clases">Tus clases</NavLink></li>}
             <li onClick={toggleModal} className="join-class"><a>Unirse a clase</a></li>
             <li className="logout"><a onClick={handleLogout} style={{ cursor: 'pointer' }}>Cerrar Sesión</a></li>
-            <li><NavLink to="/profile">Perfil</NavLink></li>
             <label htmlFor="check" className="close-menu"><i><FaIcons.FaTimes /></i></label>
           </span>
           <label htmlFor="check" className="open-menu"><i><Fa6Icons.FaBars /></i></label>
